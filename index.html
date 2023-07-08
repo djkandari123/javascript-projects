@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button changes the background</title>
+    <style>
+       
+        .buttons{
+            padding:20px;
+           color: white;
+           border: 2px solid #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading"><h1>backgound changeer</h1>
+    <span class="buttons" id="grey" style="background-color: grey;">Grey</span>
+    <span class="buttons" id="yellow" style="background-color: yellow;">yellow</span>
+    <span class="buttons" id="red" style="background-color: red;">red</span>
+    <span class="buttons" id="blue" style="background-color: blue;">blue</span>
+    </div>
+    <script>
+        const button = document.querySelectorAll(".buttons");
+        const body = document.querySelector("body");
+        // console.log(button);
+        button.forEach(function(btns){
+            btns.addEventListener("click",function(e){
+          console.log(e);
+          console.log(e.target);
+          if(e.target.id==="grey"){
+           body.style.backgroundColor = e.target.id;
+          }
+          if(e.target.id==="yellow"){
+           body.style.backgroundColor = e.target.id;
+          }
+          if(e.target.id==="red"){
+           body.style.backgroundColor = e.target.id;
+          }
+          if(e.target.id==="blue"){
+           body.style.backgroundColor = e.target.id;
+          }
+            })
+
+        })
+    </script>
+</body>
+</html>
